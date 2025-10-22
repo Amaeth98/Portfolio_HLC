@@ -1,0 +1,14 @@
+# Partimos de una imagen base de ubuntudonde instalaremos apache, lo configuraremos y arrancaremos.
+FROM ubuntu
+RUN apt update && apt install -yq --no-install-recommends \
+    apache2 \
+    libapache2-mod-php7.2 \
+    nano \
+    curl \
+    net-tools iputilils-ping
+    # Debemos consultar el docker hub de ese contenedor/imagen para ver variables de entorno,
+# directorio de trabajo, etc.
+# Directorio de trabajo dentro del contenedor.
+WORKDIR /usr/www/html
+COPY ../src .
+EXPOSE 80
