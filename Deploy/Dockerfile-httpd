@@ -11,7 +11,7 @@ RUN apt update && apt install -yq --no-install-recommends \
 # Comandos interactivos (piden datos por terminal)
 # Comandos por lotes (Datos los ponemos como parametros del comando)
 RUN useradd -rm -d /home/adri -s /bin/bash adriana
-RUN echo "1234:adriana" | chpasswd
+RUN echo "adriana:1234" | chpasswd
 RUN echo "Bienvenido adriana" > /home/adri/hello.txt
 
     # Debemos consultar el docker hub de ese contenedor/imagen para ver variables de entorno,
