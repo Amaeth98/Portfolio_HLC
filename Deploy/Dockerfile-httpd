@@ -12,3 +12,4 @@ RUN apt update && apt install -yq --no-install-recommends \
 WORKDIR /usr/www/html
 COPY ../src .
 EXPOSE 80
+CMD apacchectl -DFOREGROUND
