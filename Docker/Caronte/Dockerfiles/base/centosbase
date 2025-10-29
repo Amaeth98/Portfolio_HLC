@@ -1,0 +1,12 @@
+FROM ubuntu
+ARG USUARIO
+ARG PASSWORD
+RUN apt update && apt install -yq --no-install-recommends \
+    nano \
+    git curl \
+    iputils-ping net-tools \
+    sudo
+
+RUN useradd -rm -d /home/${USUARIO} -s /bin/bash ${USUARIO}
+RUN echo "${USUARIO}:1234" | chpasswd
+RUN echo "Bienvenido ${USUARIO}" > /home/${USUARIO}/hello.txt
