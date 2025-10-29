@@ -8,6 +8,12 @@ RUN apt update && apt install -yq --no-install-recommends \
     nano \
     curl \
     net-tools iputilils-ping
+
+# Configuracion base:
+# - 
+# 
+# Configuracion de servicio:
+# 
 # ------Creacion de usuarios------
 # Comandos interactivos (piden datos por terminal)
 # Comandos por lotes (Datos los ponemos como parametros del comando)
