@@ -1,6 +1,6 @@
 
 #!/bin/bash
-check-usuario(){
+check_usuario(){
     if grep -q "${USUARIO}" /etc/passwd
     then
         echo "${USUARIO} se encuentra en el sistema." >> /root/logs/informe.log
@@ -23,7 +23,7 @@ check_home(){
 }
 
 newuser (){
-    check-usuario
+    check_usuario
     if [ "$?" -eq 0 ] #No existe el usario.
     then
         check_home
