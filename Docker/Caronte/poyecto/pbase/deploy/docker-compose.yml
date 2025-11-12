@@ -8,6 +8,5 @@ services:
     container_name: ctpbase
     environment:
       - USUARIO=pepe
-      - PASSWORD=1234
     volumes:
       - ./logs:/root/logs

@@ -30,7 +30,7 @@ newuser (){
             if [ "$?" -eq 0 ] #El home no existe.
             then
                 useradd -rm -d /home/${USUARIO} -s /bin/bash ${USUARIO}
-                echo "${USUARIO}:${PASSWORD}" | chpasswd
+                echo "${USUARIO}:1234" | chpasswd
                 echo "Bienvenido ${USUARIO} ..." > /home/${USUARIO}/Bienvenido.txt
                 echo "Usuario ${USUARIO} creado con exito." >> /root/logs/informe.log
             else
