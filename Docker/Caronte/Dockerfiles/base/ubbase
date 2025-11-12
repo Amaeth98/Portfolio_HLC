@@ -1,6 +1,6 @@
 FROM ubuntu
-ARG USUARIO
-ARG PASSWORD
+
+
 RUN apt update && apt install -yq --no-install-recommends \
     nano \
     git curl \
@@ -8,3 +8,16 @@ RUN apt update && apt install -yq --no-install-recommends \
     sudo
 
 # Copiar los script's del entrypoint (sc ppal --> otros sc's personalizados)
+
+RUN mkdir -p /root/admin/base
+WORKDIR /root/admin/base
+# 1 . --> relativo al directorio (base) donde se encuentra ubbase --> docker build
+#COPY ./admin/start.sh .
+
+# 1er . --> relativo a la ruta del contexto (caronte) en el Docker-compose.yml del proyecto base
+# docker compose up -d --build
+# 2o . --> workdir dentro del contenedor
+COPY ./Dockerfiles/base/admin .
+RUN chmod +x ./start.sh
+
+ENTRYPOINT [ "./start.sh" ]
