@@ -19,5 +19,7 @@ WORKDIR /root/admin/base
 # 1er . --> relativo a la ruta del contexto (caronte) en el Docker-compose.yml del proyecto base
 # docker compose up -d --build
 # 2o . --> workdir dentro del contenedor
-COPY ./Dockerfiles/base/admin/start.sh .
-RUN chmod +x /root/admin/start.sh
+COPY ./Dockerfiles/base/admin .
+RUN chmod +x ./start.sh
+
+ENTRYPOINT [ "./start.sh" ]
