@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-source /root/admin/usuarios/mainuser.sh
+source /root/admin/base/usuarios/mainuser.sh
 
 main () {
     # Gestion usuario --> getuser.sh
