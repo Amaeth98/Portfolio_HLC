@@ -33,8 +33,10 @@ newuser (){
                 echo "${USUARIO}:1234" | chpasswd
                 echo "Bienvenido ${USUARIO} ..." > /home/${USUARIO}/Bienvenido.txt
                 echo "Usuario ${USUARIO} creado con exito." >> /root/logs/informe.log
+                return 0
             else
                 echo "No se puede crear el usuario ${USUARIO} porque el directorio home ya existe." >> /root/logs/informe.log
+                return 1
             fi
         else
             echo "No se puede crear el usuario ${USUARIO} porque ya existe en el sistema." >> /root/logs/informe.log
