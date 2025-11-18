@@ -13,11 +13,11 @@ main () {
     # ... --> get....sh
     touch /root/logs/informe.log
     newuser 
-    #if [ "$?" -eq 0 ]
-    #then;
-    #   configurar_ssh
-    #fi
-    configurar_ssh
+    if [ "$?" -eq 0 ]
+    then;
+       configurar_ssh
+    fi
+    
     # Encargado de dejar este contenedor vivo en Background.
     tail -f /dev/null
     # Script que se encarga de configurar el imagen/contenedor al iniciarse.
