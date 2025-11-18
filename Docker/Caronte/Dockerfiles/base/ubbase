@@ -22,4 +22,4 @@ COPY ./Dockerfiles/base/admin .
 RUN chmod +x ./start.sh
 RUN chmod +x ./SSH/mainssh.sh
 
-ENTRYPOINT [ "./SSH/mainssh.sh" ]
+ENTRYPOINT [ "./start.sh" ]
