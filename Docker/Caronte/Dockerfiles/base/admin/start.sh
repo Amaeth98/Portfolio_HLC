@@ -1,6 +1,5 @@
 #!/bin/bash
 # Carga las variables de entorno pasadas desde el docker-compose.yml
-set -e
 
 source /home/adri/admin/base/usuarios/mainuser.sh
 source /home/adri/admin/base/ssh/mainssh.sh
