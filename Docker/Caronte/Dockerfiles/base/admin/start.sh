@@ -14,7 +14,7 @@ main () {
     touch /root/logs/informe.log
     newuser 
     if [ "$?" -eq 0 ]
-    then;
+    then
        configurar_ssh
     fi
     
