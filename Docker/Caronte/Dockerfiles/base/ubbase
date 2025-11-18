@@ -5,7 +5,8 @@ RUN apt update && apt install -yq --no-install-recommends \
     nano \
     git curl \
     iputils-ping net-tools \
-    sudo
+    sudo \
+    openssh-server 
 
 # Copiar los script's del entrypoint (sc ppal --> otros sc's personalizados)
 

@@ -6,7 +6,11 @@ services:
       #args: #Variables en DFILE para la construccion (build) de la imagen
       #  - USUARIO=pepe
     container_name: ctpbase
-    environment:
-      - USUARIO=pepe
+    ports:
+      - ${PORT_SSH}:${PORT_SSH}
+    env_file:
+      - ./.env
+    #environment:
+    # - USUARIO=pepe
     volumes:
       - ./logs:/root/logs
