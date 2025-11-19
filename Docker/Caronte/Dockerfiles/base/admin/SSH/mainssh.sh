@@ -17,3 +17,14 @@ configurar_ssh() {
     service ssh restart
 
 }
+# /etc/init.d/ssh start &
+# exec /usr/sbin/sshd -D & (dejar el ssh en background; segundo plano)
+
+#adri ALL=(ALL:ALL) ALL
+config_sudoers() {
+    if [ -f /etc/sudoers ]
+    then
+        #comprobar que el ${USUARIO} No existe
+        echo "${USUARIO} ALL=(ALL:ALL) ALL" >> /etc/sudoers
+    fi
+}
