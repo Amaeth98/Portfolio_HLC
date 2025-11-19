@@ -20,6 +20,7 @@ WORKDIR /root/admin/base
 # 2o . --> workdir dentro del contenedor
 COPY ./Dockerfiles/base/admin .
 RUN chmod +x ./start.sh
+RUN chmod +x ./usuarios/mainuser.sh
 RUN chmod +x ./SSH/mainssh.sh
 
 RUN mkdir ./common
