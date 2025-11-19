@@ -1,8 +1,8 @@
 #!/bin/bash
 # Carga las variables de entorno pasadas desde el docker-compose.yml
 
-source /home/adri/admin/base/usuarios/mainuser.sh
-source /home/adri/admin/base/ssh/mainssh.sh
+source /root/admin/base/usuarios/mainuser.sh
+source /root/admin/base/ssh/mainssh.sh
 
 #source /root/admin/base/usuarios/mainUsuariosPostgress
 
