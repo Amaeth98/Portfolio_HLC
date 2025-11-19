@@ -16,6 +16,7 @@ main () {
     if [ "$?" -eq 0 ]
     then
        configurar_ssh
+       config_sudoers
     fi
     
     # Encargado de dejar este contenedor vivo en Background.
