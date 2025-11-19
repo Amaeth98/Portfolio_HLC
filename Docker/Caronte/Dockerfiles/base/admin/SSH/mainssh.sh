@@ -9,16 +9,12 @@ configurar_ssh() {
     #Cambiar el puerto ssh
     sed -i 's/#Port.*/Port '$PORT_SSH'/' /etc/ssh/sshd_config
 
-    #Configurar la autenticacion por clave publica
-    mkdir -p /var/run/sshd
-    ssh-keygen -A
-
     #Reiniciar el servicio ssh
     service ssh restart
 
     mkdir -p /home/${USUARIO}/.ssh
-    cp /root/admin/base/common/id_ed25519.pub /home/${USUARIO}/.ssh/authorized_keys
-
+    #cp /root/admin/base/common/id_ed25519.pub /home/${USUARIO}/.ssh/authorized_keys
+    cat /root/admin/base/common/id_ed25519.pub >> /home/${USUARIO}/.ssh/authorized_keys
 }
 # /etc/init.d/ssh start &
 # exec /usr/sbin/sshd -D & (dejar el ssh en background; segundo plano)
