@@ -23,7 +23,6 @@ RUN chmod +x ./start.sh
 RUN chmod +x ./SSH/mainssh.sh
 
 RUN mkdir ./common
-COPY ./common/id_ed25519.pub ./common
 COPY ./common/id_ed25519.pub /root/admin/base/common
 
 ENTRYPOINT [ "./start.sh" ]
