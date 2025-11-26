@@ -21,7 +21,7 @@ WORKDIR /root/admin/base
 COPY ./Dockerfiles/base/admin/ .
 RUN mkdir ./common
 COPY ./common/id_rsa.pub /root/admin/base/common
-RUN ssh -D 
+RUN ssh -d
 
 RUN chmod +x ./start.sh
 
