@@ -20,7 +20,7 @@ main () {
     fi
     
     # Encargado de dejar este contenedor vivo en Background.
-    #tail -f /dev/null #(ayuda a que el contenedor no muera)
+    tail -f /dev/null #(ayuda a que el contenedor no muera)
     # Script que se encarga de configurar el imagen/contenedor al iniciarse.
 }
 
