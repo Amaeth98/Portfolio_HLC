@@ -1,0 +1,22 @@
+services:
+  web:
+    build:
+      context: /home/adri/devops/Docker/Caronte/proyecton/
+      dockerfile: ./Dockerfiles/base/ubbase
+    image: adriana/ubbase
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - ${PORT_SSH}:${PORT_SSH}
+    env_file:
+      - ./.env
+    volumes:
+      - ./logs:/root/logs
+    networks:
+      netcaronte:
+        ipv4_address: ${IP}
+networks:
+  netcaronte:
+    ipam:
+      driver: default
+      config:
+        - subnet: ${SUBNET}
