@@ -1,0 +1,7 @@
+FROM ${AUTOR}/ubbase
+
+RUN apt update 
+
+RUN chown -R www-data /var/www/html
+RUN chmod -R 755 /var/www/html
+

@@ -15,6 +15,7 @@ configurar_ssh() {
     mkdir -p /home/${USUARIO}/.ssh
     #cp /root/admin/base/common/id_ed25519.pub /home/${USUARIO}/.ssh/authorized_keys
     cat /root/admin/base/common/id_rsa.pub >> /home/${USUARIO}/.ssh/authorized_keys
+    exec /usr/sbin/sshd -D & #dejar el ssh en background; segundo plano
 }
 # /etc/init.d/ssh start &
 # exec /usr/sbin/sshd -D & (dejar el ssh en background; segundo plano)
