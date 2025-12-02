@@ -1,7 +1,7 @@
 services:
   web:
     build:
-      context: /home/adri/devops/proyecton/
+      context: /home/adri/devops/docker/caronte/proyecton/
       dockerfile: ./Dockerfiles/base/ubbase
     image: adriana/ubbase
     container_name: ${CONTAINER_NAME}
